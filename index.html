@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niyah's Cat Haven</title>
+<link rel="icon" href="https://cdn.discordapp.com/attachments/1181473501325041694/1234251169627377665/iu.png?ex=66300d7a&is=662ebbfa&hm=df2c1f7cb9deee2712fd3fa767e56e734f2f0a6bbefc0463db1a4e8c34c90d01&" type="image/png">
+<meta property="og:title" content="Norsoo's Cat Haven">
+<meta property="og:description" content="This is my little cute portfolio profile thingy">
+<meta property="og:image" content="https://tenor.com/view/pink-kitty-bows-cat-nnevls-kitty-gif-52205613137327778">
+<meta property="og:url" content="https://norsoo.xyz">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0000FF">
+
+<style>
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+  }
+  .background-gif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(3px);
+  }
+  #terminal {
+    width: 300px;
+    height: 400px;
+    border: 2px solid #4e4cb8;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    color: #fff;
+    animation: pulse 3s infinite alternate;
+  }
+  #profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  #profile-pic:hover {
+    transform: scale(1.1);
+  }
+  @keyframes pulse {
+    0% {
+      border-color: #4e4cb8;
+    }
+    100% {
+      border-color: #b84c9a;
+    }
+  }
+  .github-logo {
+    width: 25px;
+    height: auto;
+    margin-top: -7px;
+    filter: invert(1);
+  }
+</style>
+</head>
+<body>
+<div class="background-gif">
+    <img src="https://cdn.discordapp.com/attachments/1142566447965540392/1234242353347301456/che.gif?ex=66300544&is=662eb3c4&hm=76d48d2b7b74fd87f590cd3c1159c47328c3abeb3902dec3e955bf1e06de594c&" alt="Background GIF" class="background-gif">
+</div>
+
+<div id="terminal">
+  <img id="profile-pic" src="https://cdn.discordapp.com/attachments/1141108482955821117/1163133142102712453/6a5a975fcf5adb9372c0ed6c4ca6f66e.png?ex=662fb9a7&is=662e6827&hm=51adb008a619a19cb81fcbbc215451e5ddc613947148ae9202ac1517dbd76ca2&" alt="Profile Picture">
+  <p>Norso@portfolio</p>
+  <p>Age: 19</p>
+  <p>Location: United Kingdom</p>
+  <p>Bio: Just a cute python dev :3</p>
+  <a href="https://github.com/Norsoo" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" class="github-logo">
+  </a>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const titles = ["Norso <3", "Initializing....", "Psst I love cats :3"];
+    const titleElement = document.querySelector('title');
+  
+    function updateTitle() {
+      const randomIndex = Math.floor(Math.random() * titles.length);
+      titleElement.innerText = titles[randomIndex];
+    }
+  
+    setInterval(updateTitle, 3000);
+  
+    const background = document.querySelector('.background-gif');
+    document.addEventListener('mousemove', function(e) {
+      const xPos = e.clientX / window.innerWidth - 0.5;
+      const yPos = e.clientY / window.innerHeight - 0.5;
+      background.style.transform = `translate(${xPos * 20}px, ${yPos * 20}px)`;
+    });
+  });
+</script>
+
+</body>
+</html>
